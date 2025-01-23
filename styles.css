@@ -206,7 +206,7 @@ h6 {
   color: #dfe2e6;
   background-color: #050505;
   background-clip: padding-box;
-  border: 1px solid #44374d;
+  border: 1px solid #8288fe;
   border-radius: 0.5rem;
   transition:
     border-color 0.15s ease-in-out,
@@ -220,7 +220,7 @@ h6 {
 .form-control:focus {
   color: #dfe2e6;
   background-color: #050505;
-  border-color: #44374d;
+  border-color: #8288fe;
   outline: 0;
   box-shadow: 0;
 }
@@ -305,7 +305,7 @@ h6 {
   word-wrap: break-word;
   background-color: #0f0f0f;
   background-clip: border-box;
-  border: 1px solid #0a0b0b;
+  border: 1px solid #161840;
   border-radius: 0.5rem;
 }
 .card-body {
@@ -436,6 +436,15 @@ h6 {
 }
 .text-muted {
   color: #6d8994 !important;
+}
+.pl-3 {
+  padding-left: 1.5rem !important;
+}
+.pt-2 {
+  padding-top: 1rem !important;
+}
+.pb-0 {
+  padding-bottom: 0rem !important;
 }
 @media print {
   *,
@@ -578,7 +587,7 @@ body {
   align-items: center;
 }
 #demo-player .wrapper .nav {
-  background-color: #25202d;
+  background-color: #4247a6;
   border-radius: 0.5rem;
   width: 23rem;
   display: flex;
@@ -631,7 +640,7 @@ body {
   border-radius: 0.6rem;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(21, 44, 66, 0.9);
+  border: 1px solid #1b1e50;
 }
 #features .feature-ico {
   width: 5rem;
@@ -689,7 +698,7 @@ body {
   color: #8288fe;
   border-radius: 0.5rem;
   padding: 0.4rem 0.7rem;
-  border: 1px solid #152c42;
+  border: 1px solid #8288fe;
   width: 100%;
   font-family:
     ubuntu mono,
@@ -728,7 +737,7 @@ body {
 }
 footer {
   color: #8288fe;
-  border-top: 1px solid #040608;
+  border-top: 1px solid #151734;
   background-color: #09090c;
   position: relative;
 }

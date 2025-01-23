@@ -233,6 +233,29 @@
                         </div>
                       </div>
                     </div>
+                    <p class="pl-3">or</p>
+                    <div
+                      id="api-Movie"
+                      class=""
+                      aria-labelledby="api-Movie"
+                      data-parent="#api-Movie"
+                    >
+                      <div class="card-body">
+                        <div class="copy-quote d-flex align-items-center">
+                          <div class="copy-text w-100">
+                            <input
+                              type="text"
+                              class="text"
+                              readonly=""
+                              value="https://iframe.pstream.org/embed/tmdb-movie-{tmdb_id}"
+                            />
+                            <button class="btn">
+                              <i class="bi bi-clipboard-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="card">
                     <div class="card-header p-2">
@@ -244,6 +267,25 @@
                         >
                       </h5>
                     </div>
+                    <p class="pl-3 pt-2">Using Season and Episode Numbers:</p>
+                    <div id="api-tvshows">
+                      <div class="card-body">
+                        <div class="copy-quote d-flex align-items-center">
+                          <div class="copy-text w-100">
+                            <input
+                              type="text"
+                              class="text"
+                              readonly=""
+                              value="https://iframe.pstream.org/embed/tmdb-tv-{tmdb_id}/{season_number}/{episode_number}"
+                            />
+                            <button class="btn">
+                              <i class="bi bi-clipboard-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="pl-3 pt-2">Using Season and Episode IDs:</p>
                     <div id="api-tvshows">
                       <div class="card-body">
                         <div class="copy-quote d-flex align-items-center">
@@ -259,10 +301,6 @@
                             </button>
                           </div>
                         </div>
-                        <p class="text-center mt-3">
-                          NOTE: Season/Episode numbers are coming soon, please
-                          use Season/Episode ID for now.
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -299,14 +337,14 @@
           let type = button.getAttribute('type');
           inputs.setAttribute('type', type);
           tmdb.value = type === 'movie' ? 945961 : 456;
-          season.value = 3592;
-          episode.value = 62464;
+          season.value = 13;
+          episode.value = 2;
           tmdb.dispatchEvent(new Event('change'));
         });
       });
       [tmdb, season, episode, embed].forEach((input) => {
         input.addEventListener('change', () => {
-          let base = 'https://iframe.pstream.org/media',
+          let base = 'https://iframe.pstream.org/embed',
             type = inputs.getAttribute('type');
           if (type == 'movie')
             embed.value = `${base}/tmdb-${type}-${tmdb.value}`;
