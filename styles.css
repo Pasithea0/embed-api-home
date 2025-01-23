@@ -55,7 +55,7 @@ a {
   background-color: transparent;
 }
 a:hover {
-  color: #a474f1; /* Green hover color */
+  color: #8288FE; /* Green hover color */
 }
 img {
   vertical-align: middle;
@@ -372,6 +372,13 @@ h6 {
   .mb-2 {
     margin-bottom: 0.5rem !important;
   }
+  .mt-2, 
+  .my-2 {
+    margin-top: 0.5rem !important;
+  }
+  .my-2 {
+    margin-bottom: 0.5rem !important;
+  }
   .mt-3,
   .my-3 {
     margin-top: 1rem !important;
@@ -527,10 +534,7 @@ h6 {
     padding: 0.2rem 1rem;
   }
   body {
-    background-image: url(/head-bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    top: 0;
+    background-color: #010002;
     width: 100%;
   }
   .container {
@@ -556,7 +560,7 @@ h6 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    background-image: linear-gradient(34deg, #6c4fb6 0%, #7547ad 50%, #3e2588 100%);
+    background-image: linear-gradient(34deg, #6069e1 0%, #7547ad 50%, #3217ba 100%);
     }
   #demo-player .wrapper {
     display: flex;
@@ -624,7 +628,7 @@ h6 {
     height: 5rem;
   }
   .ex-box > div {
-    border: 1px solid #152c42;
+    border: 1px solid #1e2657;
     background: #0e161d;
     display: flex;
     flex-direction: column;
@@ -670,7 +674,7 @@ h6 {
   }
   #api .copy-quote > div input {
     background-color: #09121c;
-    color: #a474f1;
+    color: #8288FE;
     border-radius: 0.5rem;
     padding: 0.4rem 0.7rem;
     border: 1px solid #152c42;
@@ -689,7 +693,7 @@ h6 {
     transition: font-size 0.3s;
   }
   #api .copy-quote > div button:hover {
-    color: #a474f1;
+    color: #8288FE;
   }
   #api .copy-quote > div:hover button {
     font-size: 1rem;
@@ -709,7 +713,7 @@ h6 {
     margin-bottom: 0;
   }
   footer {
-    color: #836fdd;
+    color: #8288FE;
     border-top: 1px solid #040608;
     background-color: #09090c;
     position: relative;
