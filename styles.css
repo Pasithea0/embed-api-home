@@ -643,18 +643,25 @@ body {
   border: 1px solid #1b1e50;
 }
 #features .feature-ico {
-  width: 5rem;
-  height: 5rem;
+  width: 100px;
+  height: 100px;
+  color: #8288fe;
+  margin: 0 auto 1.5rem;
+  stroke-width: 1.5;
+  display: block;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
 }
 .ex-box > div {
-  border: 1px solid #1e2657;
-  background: #0e161d;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  background: #050505;
+  border: 1px solid #8288fe;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  transition:
-    border-color 0.3s,
-    background-color 0.3s;
+  overflow: hidden;
+  padding: 2rem;
 }
 .ex-box > div:after {
   position: absolute;
@@ -668,18 +675,36 @@ body {
   border-radius: 0.6rem;
 }
 .ex-box > div h5 {
-  font-size: 1.2rem;
+  margin-bottom: 1rem;
   color: #fff;
+  transition: all 0.3s ease;
+}
+.ex-box > div .text-muted {
+  margin-bottom: 0;
+  transition: all 0.3s ease;
 }
 .ex-box > div:hover {
-  border-color: #1b3956;
-  background-color: #112437;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(130, 136, 254, 0.3);
+  border-color: #a0a6ff;
+}
+.ex-box > div:hover .feature-ico {
+  color: #fff;
+  transform: scale(1.15) rotate(5deg);
+  filter: drop-shadow(0 0 10px rgba(130, 136, 254, 0.5));
+}
+.ex-box > div:hover h5 {
+  color: #a0a6ff;
+  transform: translateY(-2px);
+}
+.ex-box > div:hover .text-muted {
+  color: #d1d5db;
 }
 .ex-box.more-height > div {
   height: 18rem;
 }
 .section-padding {
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 .section-title {
   font-size: 3rem;
@@ -689,51 +714,102 @@ body {
 #api {
   background-size: 5rem 5rem;
 }
-#api .copy-quote > div {
+#api .copy-quote {
   position: relative;
-  flex-grow: 1;
+  margin-bottom: 1rem;
 }
-#api .copy-quote > div input {
-  background-color: #09121c;
+#api .copy-quote:last-child {
+  margin-bottom: 0;
+}
+#api .copy-quote .text {
+  background: rgba(130, 136, 254, 0.1);
+  border: 1px solid rgba(130, 136, 254, 0.2);
   color: #8288fe;
-  border-radius: 0.5rem;
-  padding: 0.4rem 0.7rem;
-  border: 1px solid #8288fe;
+  padding: 0.75rem;
+  font-family: monospace;
+  font-size: 0.9rem;
   width: 100%;
-  font-family:
-    ubuntu mono,
-    monospace;
+  border-radius: 0.5rem;
 }
-#api .copy-quote > div button {
+#api .copy-btn {
   position: absolute;
-  right: 0.7rem;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
+  right: 0.75rem;
+  top: 55%;
+  transform: translateY(-50%);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: none;
+  border: none;
   padding: 0;
-  color: #6d8994;
-  font-size: 0;
-  transition: font-size 0.3s;
+  cursor: pointer;
 }
-#api .copy-quote > div button:hover {
+#api .copy-quote:hover .copy-btn {
+  opacity: 1;
+}
+#api .copy-btn:hover {
   color: #8288fe;
 }
-#api .copy-quote > div:hover button {
-  font-size: 1rem;
+#api .card {
+  background: #050505;
+  border: 1px solid #8288fe;
+  margin-bottom: 1rem;
 }
-#api .card .card-header {
-  background-color: #19202c;
-  transition: background-color 0.3s;
+#api .card-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(130, 136, 254, 0.2);
+  padding: 1rem;
 }
-#api .card .card-header:hover {
-  background-color: #112437;
+#api .card-header button {
+  color: #fff;
+  font-size: 1.1rem;
+}
+#api .card-body {
+  padding: 1.5rem;
 }
 #api .card h6 {
-  margin-top: 1.5rem;
-  color: #a8b9bf;
+  color: #8288fe;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+#api .card .text-muted {
+  background: rgba(130, 136, 254, 0.1);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 #api .card p {
   margin-bottom: 0;
+  color: #d1d5db;
+}
+#api .card p strong {
+  color: #8288fe;
+  font-weight: 600;
+}
+#api .card .text-muted.small {
+  background: rgba(130, 136, 254, 0.05);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+  border-left: 3px solid #8288fe;
+}
+#api .card .text-muted.small strong {
+  color: #8288fe;
+  font-weight: 600;
+}
+@media (max-width: 767.98px) {
+  #api .card-body {
+    padding: 1rem;
+  }
+  
+  #api .card h6 {
+    margin-top: 1rem;
+  }
 }
 footer {
   color: #8288fe;
@@ -746,7 +822,7 @@ footer {
 }
 @media (max-width: 1399.98px) {
   .section-padding {
-    padding: 8rem 0;
+    padding: 3rem 0;
   }
 }
 @media (max-width: 991.98px) {
@@ -810,4 +886,11 @@ iframe {
 }
 .hidden {
   display: none;
+}
+#api .card.mb-4 {
+  background: transparent;
+  border: none;
+}
+#api .card.mb-4 .card-body {
+  padding: 1rem;
 }

@@ -11,7 +11,7 @@
     />
     <link rel="shortcut icon" href="/images/Icon-128.png" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="js/lordicon.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script
       defer=""
       src="js/script.js"
@@ -100,7 +100,7 @@
             </div>
           </div>
         </section>
-        <section class="section-padding hidden" id="features">
+        <section class="section-padding" id="features">
           <div class="container">
             <h2 class="section-title">
               <span class="major-color">Deliver an optimized</span>
@@ -115,14 +115,7 @@
                 class="col shadow-md col-12 col-sm-6 col-lg-3 pb-4 ex-box more-height"
               >
                 <div class="rounded p-3">
-                  <lord-icon
-                    class="feature-ico"
-                    src="xhsumrcb.json"
-                    target="div"
-                    trigger="loop-on-hover"
-                    colors="primary:#00ff62,secondary:#0a4d2e"
-                  >
-                  </lord-icon>
+                  <i data-lucide="refresh-cw" class="feature-ico"></i>
                   <h5 class="mt-auto">Auto Update</h5>
                   <div class="text-muted">
                     Links are automatically updated with new or better quality
@@ -134,14 +127,7 @@
                 class="col shadow-md col-12 col-sm-6 col-lg-3 pb-4 ex-box more-height"
               >
                 <div class="rounded p-3">
-                  <lord-icon
-                    class="feature-ico"
-                    src="ivhjpjsw.json"
-                    target="div"
-                    trigger="loop-on-hover"
-                    colors="primary:#00ff62,secondary:#0a4d2e"
-                  >
-                  </lord-icon>
+                  <i data-lucide="smartphone" class="feature-ico"></i>
                   <h5 class="mt-auto">Responsive</h5>
                   <div class="text-muted">
                     The player is responsive and can work on every Desktop,
@@ -153,17 +139,10 @@
                 class="col shadow-md col-12 col-sm-6 col-lg-3 pb-4 ex-box more-height"
               >
                 <div class="rounded p-3">
-                  <lord-icon
-                    class="feature-ico"
-                    src="ydqfeguo.json"
-                    target="div"
-                    trigger="loop-on-hover"
-                    colors="primary:#00ff62,secondary:#0a4d2e"
-                  >
-                  </lord-icon>
+                  <i data-lucide="tv-minimal" class="feature-ico"></i>
                   <h5 class="mt-auto">High Quality</h5>
                   <div class="text-muted">
-                    The quality of the links is the latest available, mostly are
+                    The quality of the links is the latest available, most are
                     1080p.
                   </div>
                 </div>
@@ -172,14 +151,7 @@
                 class="col shadow-md col-12 col-sm-6 col-lg-3 pb-4 ex-box more-height"
               >
                 <div class="rounded p-3">
-                  <lord-icon
-                    class="feature-ico"
-                    src="qtiwxsuo.json"
-                    target="div"
-                    trigger="loop-on-hover"
-                    colors="primary:#00ff62,secondary:#0a4d2e"
-                  >
-                  </lord-icon>
+                  <i data-lucide="zap" class="feature-ico"></i>
                   <h5 class="mt-auto">Fast Streaming Servers</h5>
                   <div class="text-muted">
                     The player includes a list of fastest streaming servers,
@@ -202,7 +174,7 @@
               parameters.
             </div>
             <div class="row mt-4">
-              <div class="mx-auto col-12 col-lg-6 p-3">
+              <div class="col-12 col-lg-6 p-3">
                 <div class="accordion">
                   <div class="card">
                     <div class="card-header p-2">
@@ -212,132 +184,133 @@
                         </button>
                       </h5>
                     </div>
-                    <div
-                      id="api-Movie"
-                      class=""
-                      aria-labelledby="api-Movie"
-                      data-parent="#api-Movie"
-                    >
-                      <div class="card-body">
-                        <div class="copy-quote d-flex align-items-center">
-                          <div class="copy-text w-100">
-                            <input
-                              type="text"
-                              class="text"
-                              readonly=""
-                              value="https://iframe.pstream.org/media/tmdb-movie-{tmdb_id}"
-                            />
-                            <button class="btn">
-                              <i class="bi bi-clipboard-fill"></i>
-                            </button>
-                          </div>
+                    <div class="card-body">
+                      <h6>Example:</h6>
+                      <div class="copy-quote d-flex align-items-center mb-3">
+                        <div class="copy-text w-100">
+                          <input
+                            type="text"
+                            class="text"
+                            readonly=""
+                            value="https://iframe.pstream.org/embed/tmdb-movie-{tmdb_id}"
+                          />
                         </div>
+                        <button class="copy-btn">
+                          <i data-lucide="copy"></i>
+                        </button>
                       </div>
-                    </div>
-                    <p class="pl-3">or</p>
-                    <div
-                      id="api-Movie"
-                      class=""
-                      aria-labelledby="api-Movie"
-                      data-parent="#api-Movie"
-                    >
-                      <div class="card-body">
-                        <div class="copy-quote d-flex align-items-center">
-                          <div class="copy-text w-100">
-                            <input
-                              type="text"
-                              class="text"
-                              readonly=""
-                              value="https://iframe.pstream.org/embed/tmdb-movie-{tmdb_id}"
-                            />
-                            <button class="btn">
-                              <i class="bi bi-clipboard-fill"></i>
-                            </button>
-                          </div>
+                      <h6>Or:</h6>
+                      <div class="copy-quote d-flex align-items-center">
+                        <div class="copy-text w-100">
+                          <input
+                            type="text"
+                            class="text"
+                            readonly=""
+                            value="https://iframe.pstream.org/media/tmdb-movie-{tmdb_id}"
+                          />
                         </div>
+                        <button class="copy-btn">
+                          <i data-lucide="copy"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 p-3">
+                <div class="accordion">
                   <div class="card">
                     <div class="card-header p-2">
                       <h5 class="mb-0">
-                        <span
-                          class="btn w-100 text-left"
-                          aria-controls="api-tvshows"
-                          ><b>TV Shows Embed URL</b></span
-                        >
+                        <button class="btn w-100 text-left" type="button">
+                          <b>TV Show Embed URL</b>
+                        </button>
                       </h5>
                     </div>
-                    <p class="pl-3 pt-2">Using Season and Episode Numbers:</p>
-                    <div id="api-tvshows">
-                      <div class="card-body">
-                        <div class="copy-quote d-flex align-items-center">
-                          <div class="copy-text w-100">
-                            <input
-                              type="text"
-                              class="text"
-                              readonly=""
-                              value="https://iframe.pstream.org/embed/tmdb-tv-{tmdb_id}/{season_number}/{episode_number}"
-                            />
-                            <button class="btn">
-                              <i class="bi bi-clipboard-fill"></i>
-                            </button>
-                          </div>
+                    <div class="card-body">
+                      <h6>Example:</h6>
+                      <div class="copy-quote d-flex align-items-center mb-3">
+                        <div class="copy-text w-100">
+                          <input
+                            type="text"
+                            class="text"
+                            readonly=""
+                            value="https://iframe.pstream.org/embed/tmdb-tv-{tmdb_id}/{season_number}/{episode_number}"
+                          />
                         </div>
+                        <button class="copy-btn">
+                          <i data-lucide="copy"></i>
+                        </button>
                       </div>
-                    </div>
-                    <p class="pl-3 pt-2">Using Season and Episode IDs:</p>
-                    <div id="api-tvshows">
-                      <div class="card-body">
-                        <div class="copy-quote d-flex align-items-center">
-                          <div class="copy-text w-100">
-                            <input
-                              type="text"
-                              class="text"
-                              readonly=""
-                              value="https://iframe.pstream.org/media/tmdb-tv-{tmdb_id}/{season_id}/{episode_id}"
-                            />
-                            <button class="btn">
-                              <i class="bi bi-clipboard-fill"></i>
-                            </button>
-                          </div>
+                      <h6>Example with IDs:</h6>
+                      <div class="copy-quote d-flex align-items-center">
+                        <div class="copy-text w-100">
+                          <input
+                            type="text"
+                            class="text"
+                            readonly=""
+                            value="https://iframe.pstream.org/media/tmdb-tv-{tmdb_id}/{season_tmdb_id}/{episode_tmdb_id}"
+                          />
                         </div>
+                        <button class="copy-btn">
+                          <i data-lucide="copy"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row mt-4 pt-2">
-              <div class="mx-auto col-12 col-lg-6 p-3">
-                <div class="accordion">
-                  <div class="card">
-                    <div class="card-header p-2">
-                      <h5 class="mb-0">
-                        <button class="btn w-100 text-left" type="button">
-                          <b>Example Usage</b>
-                        </button>
-                      </h5>
+            <div class="row">
+              <div class="col-12">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <p class="text-muted small">
+                      <strong>Note:</strong> The /media/ format requires TMDB IDs for season and episode, while the /embed/ format uses season and episode numbers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header p-2">
+                    <h5 class="mb-0">
+                      <button class="btn w-100 text-left" type="button">
+                        <b>Optional Query Parameters</b>
+                      </button>
+                    </h5>
+                  </div>
+                  <div class="card-body">
+                    <h6>Example:</h6>
+                    <div class="copy-quote d-flex align-items-center mb-3">
+                      <div class="copy-text w-100">
+                        <input
+                          type="text"
+                          class="text"
+                          readonly=""
+                          value="https://iframe.pstream.org/media/tmdb-movie-{tmdb_id}?theme=default&language=en"
+                        />
+                      </div>
+                      <button class="copy-btn">
+                        <i data-lucide="copy"></i>
+                      </button>
                     </div>
-                    <div
-                      id="api-Movie"
-                      class=""
-                      aria-labelledby="api-Movie"
-                      data-parent="#api-Movie"
-                    >
-                      <div class="card-body">
-                        <div class="copy-quote d-flex align-items-center">
-                          <div class="copy-text w-100">
-                            <input
-                              type="text"
-                              class="text"
-                              readonly
-                              value="<iframe allowfullscreen scrolling='no' src='https://iframe.pstream.org/embed/tmdb-tv-456/12/2'></iframe>"
-                            />
-                            <button class="btn">
-                              <i class="bi bi-clipboard-fill"></i>
-                            </button>
-                          </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+                        <h6>Theme Parameter</h6>
+                        <p>Player theme (default: default)</p>
+                        <div class="text-muted">
+                          Available themes: Default, Classic, Blue, Teal, Red, Gray, Green, Mocha, Pink
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 mt-3 mt-md-0">
+                        <h6>Language Parameter</h6>
+                        <p>Player interface language (default: en)</p>
+                        <div class="text-muted">
+                          Available languages: en (English), de (German), fr (French), es (Spanish), it (Italian), pt (Portuguese), ru (Russian), many more... (2 character ISO 639-1 language code)
                         </div>
                       </div>
                     </div>
@@ -391,6 +364,9 @@
           return ($('iframe').src = embed.value);
         });
       });
+    </script>
+    <script>
+      lucide.createIcons();
     </script>
   </body>
 </html>
