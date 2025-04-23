@@ -425,5 +425,35 @@
     <script>
       lucide.createIcons();
     </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const copyButtons = document.querySelectorAll('.copy-btn');
+
+        copyButtons.forEach((button) => {
+          button.addEventListener('click', async function () {
+            const inputField =
+              this.parentElement.querySelector('.copy-text input');
+            const textToCopy = inputField.value;
+
+            try {
+              await navigator.clipboard.writeText(textToCopy);
+              console.log('Text copied to clipboard');
+
+              // Visual feedback
+              const originalIcon = button.innerHTML;
+              button.innerHTML = '<i data-lucide="check"></i>';
+              lucide.createIcons();
+
+              setTimeout(() => {
+                button.innerHTML = originalIcon;
+                lucide.createIcons();
+              }, 2000);
+            } catch (err) {
+              console.error('Failed to copy text: ', err);
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
