@@ -266,7 +266,9 @@
                 <div class="card mb-4">
                   <div class="card-body">
                     <p class="text-muted small">
-                      <strong>Note:</strong> The /media/ format requires TMDB IDs for season and episode, while the /embed/ format uses season and episode numbers.
+                      <strong>Note:</strong> The /media/ format requires TMDB
+                      IDs for season and episode, while the /embed/ format uses
+                      season and episode numbers.
                     </p>
                   </div>
                 </div>
@@ -290,7 +292,7 @@
                           type="text"
                           class="text"
                           readonly=""
-                          value="https://iframe.pstream.org/media/tmdb-movie-{tmdb_id}?theme=default&language=en&logo=true&downloads=true&watchparty=true&lang-order=en,hi,fr,de,nl,pt"
+                          value="https://iframe.pstream.org/media/tmdb-movie-{tmdb_id}?theme=default&language=en&logo=true&downloads=true&watchparty=true&lang-order=en,hi,fr,de,nl,pt&allinone=true"
                         />
                       </div>
                       <button class="copy-btn">
@@ -303,14 +305,18 @@
                           <h6>Theme Parameter</h6>
                           <p>Player theme (default: default)</p>
                           <div class="text-muted">
-                            Available themes: Default, Classic, Blue, Teal, Red, Gray, Green, Mocha, Pink
+                            Available themes: Default, Classic, Blue, Teal, Red,
+                            Gray, Green, Mocha, Pink
                           </div>
                         </div>
                         <div class="col-12 col-md-6 mt-3 mt-md-0">
                           <h6>Language Parameter</h6>
                           <p>Player interface language (default: en)</p>
                           <div class="text-muted">
-                            Available languages: en (English), de (German), fr (French), es (Spanish), it (Italian), pt (Portuguese), ru (Russian), many more... (2 character ISO 639-1 language code)
+                            Available languages: en (English), de (German), fr
+                            (French), es (Spanish), it (Italian), pt
+                            (Portuguese), ru (Russian), many more... (2
+                            character ISO 639-1 language code)
                           </div>
                         </div>
                       </div>
@@ -333,16 +339,34 @@
                       <div class="row mt-3">
                         <div class="col-12 col-md-6">
                           <h6>Watch Party Parameter</h6>
-                          <p>Enable/disable watch party feature (default: true)</p>
+                          <p>
+                            Enable/disable watch party feature (default: true)
+                          </p>
                           <div class="text-muted">
                             Set to false to hide the watch party menu
                           </div>
                         </div>
                         <div class="col-12 col-md-6 mt-3 mt-md-0">
                           <h6>Language Order Parameter</h6>
-                          <p>Set subtitle language priority order (default: en,hi,fr,de,nl,pt)</p>
+                          <p>
+                            Set subtitle language priority order (default:
+                            en,hi,fr,de,nl,pt)
+                          </p>
                           <div class="text-muted">
-                            Comma-separated list of language codes (e.g., fr,de,en,ru,he)
+                            Comma-separated list of language codes (e.g.,
+                            fr,de,en,ru,he)
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-12 col-md-6">
+                          <h6>All In One Parameter</h6>
+                          <p>
+                            Enable/disable episode selector, next episode
+                            button, and info button (default: false)
+                          </p>
+                          <div class="text-muted">
+                            Set to true to show these features
                           </div>
                         </div>
                       </div>
