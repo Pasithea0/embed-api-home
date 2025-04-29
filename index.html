@@ -292,7 +292,7 @@
                           type="text"
                           class="text"
                           readonly=""
-                          value="https://iframe.pstream.org/media/tmdb-movie-{tmdb_id}?theme=default&language=en&logo=true&downloads=true&watchparty=true&lang-order=en,hi,fr,de,nl,pt&allinone=true"
+                          value="https://iframe.pstream.org/media/tmdb-movie-{tmdb_id}?theme=default&language=en&logo=true&downloads=true&watchparty=true&lang-order=en,hi,fr,de,nl,pt&allinone=true&scale=0.9"
                         />
                       </div>
                       <button class="copy-btn">
@@ -300,9 +300,9 @@
                       </button>
                     </div>
                     <div class="card-body">
-                      <div class="row">
+                      <div class="row mt-3">
                         <div class="col-12 col-md-6">
-                          <h6>Theme Parameter</h6>
+                          <h6>Theme Parameter <code>theme=default</code></h6>
                           <p>Player theme (default: default)</p>
                           <div class="text-muted">
                             Available themes: Default, Classic, Blue, Teal, Red,
@@ -310,7 +310,7 @@
                           </div>
                         </div>
                         <div class="col-12 col-md-6 mt-3 mt-md-0">
-                          <h6>Language Parameter</h6>
+                          <h6>Language Parameter <code>language=en</code></h6>
                           <p>Player interface language (default: en)</p>
                           <div class="text-muted">
                             Available languages: en (English), de (German), fr
@@ -322,14 +322,16 @@
                       </div>
                       <div class="row mt-3">
                         <div class="col-12 col-md-6">
-                          <h6>Logo Parameter</h6>
+                          <h6>Logo Parameter <code>logo=true</code></h6>
                           <p>Show/hide player logo (default: true)</p>
                           <div class="text-muted">
                             Set to false to hide the player logo
                           </div>
                         </div>
                         <div class="col-12 col-md-6 mt-3 mt-md-0">
-                          <h6>Downloads Parameter</h6>
+                          <h6>
+                            Downloads Parameter <code>downloads=true</code>
+                          </h6>
                           <p>Enable/disable downloads menu (default: true)</p>
                           <div class="text-muted">
                             Set to false to hide the downloads menu
@@ -338,7 +340,9 @@
                       </div>
                       <div class="row mt-3">
                         <div class="col-12 col-md-6">
-                          <h6>Watch Party Parameter</h6>
+                          <h6>
+                            Watch Party Parameter <code>watchparty=true</code>
+                          </h6>
                           <p>
                             Enable/disable watch party feature (default: true)
                           </p>
@@ -347,7 +351,10 @@
                           </div>
                         </div>
                         <div class="col-12 col-md-6 mt-3 mt-md-0">
-                          <h6>Language Order Parameter</h6>
+                          <h6>
+                            Language Order Parameter
+                            <code>lang-order=en,hi,fr,de,nl,pt</code>
+                          </h6>
                           <p>
                             Set subtitle language priority order (default:
                             en,hi,fr,de,nl,pt)
@@ -360,13 +367,24 @@
                       </div>
                       <div class="row mt-3">
                         <div class="col-12 col-md-6">
-                          <h6>All In One Parameter</h6>
+                          <h6>
+                            All In One Parameter <code>allinone=true</code>
+                          </h6>
                           <p>
                             Enable/disable episode selector, next episode
                             button, and info button (default: false)
                           </p>
                           <div class="text-muted">
                             Set to true to show these features
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-12 col-md-6">
+                          <h6>Scale Parameter <code>scale=0.9</code></h6>
+                          <p>Set the scale of the interface (default: 1)</p>
+                          <div class="text-muted">
+                            Set to a value between 0 and 2
                           </div>
                         </div>
                       </div>

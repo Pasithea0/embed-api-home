@@ -806,7 +806,7 @@ body {
   #api .card-body {
     padding: 1rem;
   }
-  
+
   #api .card h6 {
     margin-top: 1rem;
   }
@@ -893,4 +893,11 @@ iframe {
 }
 #api .card.mb-4 .card-body {
   padding: 1rem;
+}
+code {
+  color: #45498e;
+  background: rgba(130, 136, 254, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.9rem;
 }
