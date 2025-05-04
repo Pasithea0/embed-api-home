@@ -292,7 +292,7 @@
                           type="text"
                           class="text"
                           readonly=""
-                          value="https://iframe.pstream.org/media/tmdb-movie-{tmdb_id}?theme=default&language=en&logo=true&downloads=true&watchparty=true&lang-order=en,hi,fr,de,nl,pt&allinone=true&scale=0.9"
+                          value="https://iframe.pstream.org/media/tmdb-movie-{tmdb_id}?theme=default&language=en&logo=true&downloads=true&watchparty=true&lang-order=en,hi,fr,de,nl,pt&allinone=true&scale=0.9&backlink=https://pstream.org"
                         />
                       </div>
                       <button class="copy-btn">
@@ -385,6 +385,19 @@
                           <p>Set the scale of the interface (default: 1)</p>
                           <div class="text-muted">
                             Set to a value between 0 and 2
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-12 col-md-6">
+                          <h6>
+                            Backlink Parameter <code>backlink=https://yoursite.com</code>
+                          </h6>
+                          <p>
+                            Backlink URL (default: "" = hidden)
+                          </p>
+                          <div class="text-muted">
+                            Show the backlink within the player and redirect to your site
                           </div>
                         </div>
                       </div>
