@@ -292,7 +292,7 @@
                           type="text"
                           class="text"
                           readonly=""
-                          value="https://iframe.pstream.org/media/tmdb-movie-{tmdb_id}?theme=default&language=en&logo=true&downloads=true&watchparty=true&lang-order=en,hi,fr,de,nl,pt&allinone=true&scale=0.9&backlink=https://pstream.org"
+                          value="https://iframe.pstream.org/media/tmdb-movie-{tmdb_id}?theme=default&language=en&logo=true&downloads=true&watchparty=true&language-order=en,hi,fr,de,nl,pt&allinone=true&scale=0.9&backlink=https://pstream.org&fedapi=true&interface-settings=true&tips=true"
                         />
                       </div>
                       <button class="copy-btn">
@@ -353,7 +353,7 @@
                         <div class="col-12 col-md-6 mt-3 mt-md-0">
                           <h6>
                             Language Order Parameter
-                            <code>lang-order=en,hi,fr,de,nl,pt</code>
+                            <code>language-order=en,hi,fr,de,nl,pt</code>
                           </h6>
                           <p>
                             Set subtitle language priority order (default:
@@ -391,13 +391,52 @@
                       <div class="row mt-3">
                         <div class="col-12 col-md-6">
                           <h6>
-                            Backlink Parameter <code>backlink=https://yoursite.com</code>
+                            Backlink Parameter
+                            <code>backlink=https://yoursite.com</code>
+                          </h6>
+                          <p>Backlink URL (default: "" = hidden)</p>
+                          <div class="text-muted">
+                            Show the backlink within the player and redirect to
+                            your site
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-12 col-md-6">
+                          <h6>
+                            Enable FED API Parameter <code>fedapi=true</code>
                           </h6>
                           <p>
-                            Backlink URL (default: "" = hidden)
+                            "Setup FED API" button visiblility (default: true)
                           </p>
                           <div class="text-muted">
-                            Show the backlink within the player and redirect to your site
+                            Show or hide the "Setup FED API" button in the
+                            source selection view
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-12 col-md-6">
+                          <h6>
+                            Interface settings Parameter
+                            <code>interface-setting=true</code>
+                          </h6>
+                          <p>Hide or show interface settings (default: true)</p>
+                          <div class="text-muted">
+                            Show or hide the theme and language settings in the
+                            player
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-12 col-md-6">
+                          <h6>
+                            Tips Parameter
+                            <code>tips=true</code>
+                          </h6>
+                          <p>Hide or show tips (default: true)</p>
+                          <div class="text-muted">
+                            Show or hide interface usage tips in the player while scraping
                           </div>
                         </div>
                       </div>
