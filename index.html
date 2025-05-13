@@ -436,11 +436,89 @@
                           </h6>
                           <p>Hide or show tips (default: true)</p>
                           <div class="text-muted">
-                            Show or hide interface usage tips in the player while scraping
+                            Show or hide interface usage tips in the player
+                            while scraping
                           </div>
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mt-4">
+              <div class="card-header p-2">
+                <h5 class="mb-0">
+                  <button class="btn w-100 text-left" type="button">
+                    <b>Advanced Client Embed Interaction</b>
+                  </button>
+                </h5>
+              </div>
+              <div class="card-body">
+                <p class="mb-4">
+                  The player can communicate with your website through
+                  postMessage events. The player sends time updates that can be
+                  used to track playback progress or integrate with your
+                  analytics. Here's how to listen for these events:
+                </p>
+                <h6 class="mt-4">Basic Implementation:</h6>
+                <div class="copy-quote d-flex align-items-center mb-3">
+                  <div class="copy-text w-100">
+                    <pre><code class="language-javascript">// Listen for messages from the player iframe
+window.addEventListener("message", (event) => {
+  // Verify the message is from our player domain
+  if (event.origin !== "https://iframe.pstream.org") return;
+  
+  // Handle time update events
+  if (event.data.type === "playerTimeUpdate") {
+    console.log("Current time:", event.data.time);
+    console.log("Total duration:", event.data.duration);
+  }
+});</code></pre>
+                  </div>
+                  <button class="copy-btn">
+                    <i data-lucide="copy"></i>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h6 class="mt-4">Available Events:</h6>
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h6 class="text-primary mb-3">playerTimeUpdate</h6>
+                      <p class="text-muted mb-3">
+                        Fired when the playback time changes. Updates are
+                        throttled to every 1 second to prevent excessive message
+                        passing.
+                      </p>
+                      <pre><code class="language-javascript">{
+  type: "playerTimeUpdate",
+  time: number,      // Current time in seconds
+  duration: number   // Total duration in seconds
+}</code></pre>
+                    </div>
+                  </div>
+
+                  <div class="alert alert-info mt-4">
+                    <h6 class="alert-heading">Implementation Details:</h6>
+                    <ul class="mb-0">
+                      <li>
+                        Time updates are throttled to prevent excessive message
+                        passing
+                      </li>
+                      <li>
+                        The time value is always between 0 and the total
+                        duration
+                      </li>
+                      <li>
+                        Updates are sent both during normal playback and when
+                        seeking
+                      </li>
+                      <li>
+                        The event is sent to the parent window using
+                        <code>window.parent.postMessage()</code>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

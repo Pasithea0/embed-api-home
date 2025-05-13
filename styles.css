@@ -901,3 +901,47 @@ code {
   padding: 0.2rem 0.4rem;
   font-size: 0.9rem;
 }
+
+/* Code block styles */
+pre {
+  background: #0a0a0a;
+  border: 1px solid #1b1e50;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0;
+  overflow-x: auto;
+}
+
+pre code {
+  color: #d1d5db;
+  background: transparent;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  display: block;
+}
+
+pre code .language-javascript {
+  color: #d1d5db;
+}
+
+/* Syntax highlighting colors */
+pre code .keyword {
+  color: #ff79c6;
+}
+pre code .string {
+  color: #f1fa8c;
+}
+pre code .comment {
+  color: #6272a4;
+}
+pre code .function {
+  color: #8be9fd;
+}
+pre code .number {
+  color: #bd93f9;
+}
+pre code .operator {
+  color: #ff79c6;
+}
