@@ -514,9 +514,9 @@ window.addEventListener("message", (event) => {
                         passing.
                       </p>
                       <pre><code class="language-javascript">{
-  type: "playerTimeUpdate",
-  time: number,      // Current time in seconds
-  duration: number   // Total duration in seconds
+	type: "playerTimeUpdate",
+	time: number,      // Current time in seconds
+	duration: number   // Total duration in seconds
 	tmdbId: string,    // TMDB ID
 	imdbId: string     // IMDB ID
 }</code></pre>
@@ -530,13 +530,13 @@ window.addEventListener("message", (event) => {
                         Fired when the user changes episodes within a TV series. This event provides both the new episode/season information and the previous values.
                       </p>
                       <pre><code class="language-javascript">{
-  type: "episodeChanged",
-  episodeNumber: number,    // New episode number
-  seasonNumber: number,     // New season number
-  tmdbId: string,           // TMDB ID of the show
-  imdbId: string,           // IMDB ID of the show
-  oldEpisodeNumber: number, // Previous episode number
-  oldSeasonNumber: number   // Previous season number
+	type: "episodeChanged",
+	episodeNumber: number,    // New episode number
+	seasonNumber: number,     // New season number
+	tmdbId: string,           // TMDB ID of the show
+	imdbId: string,           // IMDB ID of the show
+	oldEpisodeNumber: number, // Previous episode number
+	oldSeasonNumber: number   // Previous season number
 }</code></pre>
                     </div>
                   </div>
